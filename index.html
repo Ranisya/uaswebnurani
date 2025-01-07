@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toko Pakaian Auzarina</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #1e3c72, #2a5298); /* Background biru gradasi */
+            color: white;
+        }
+        #cart-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        #cart-icon i {
+            font-size: 24px;
+        }
+        #hero {
+            background-image: url('baju3.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 250px 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        #hero h1, #hero p {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        #why-us ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #why-us ul li {
+            font-size: 1.2em;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8d7da;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            color: #721c24;
+            transition: transform 0.3s ease;
+        }
+        #why-us ul li:hover {
+            transform: scale(1.05);
+        }
+        #why-us h2 {
+            font-family: 'Arial', sans-serif;
+            font-size: 2.5em;
+            color: #ff5722;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Navigasi -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid bg-primary text-white rounded">
+                <a class="navbar-brand" href="#hero">Toko Pakaian Auzarina</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#hero" onclick="showSection('hero')">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" onclick="showSection('about')">Tentang Kami</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#products" onclick="showSection('products')">Katalog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#why-us" onclick="showSection('why-us')">Kelebihan Kami</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact" onclick="showSection('contact')">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Section Hero -->
+        <section id="hero" style="display: block;">
+            <h1 class="text-center">Selamat Datang di Toko Pakaian Kami</h1>
+            <p class="text-center">Promo Spesial: Diskon Hingga 50% untuk Semua Produk!</p>
+        </section>
+
+        <!-- Section Tentang Kami -->
+        <section id="about" class="my-4" style="display: none;">
+            <h2>Tentang Kami</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="rania.jpg" alt="Profil" class="img-fluid rounded" style="height: 9cm; width: 5.5cm;">
+                </div>
+                <div class="col-md-8">
+                    <p><strong>Nama:</strong> Nurani Sya'dyah</p>
+                    <p><strong>NIM:</strong> 222303014</p>
+                    <p><strong>Alamat:</strong> Jatinangor, Sumedang, Jawa Barat</p>
+                    <p><strong>Email:</strong> nuranisyadyah@gmail.com</p>
+                    <p><strong>Telepon:</strong> 089502567788</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Katalog Produk -->
+        <section id="products" class="my-4" style="display: none;">
+            <h2>Katalog Produk</h2>
+            <div class="row g-4">
+                <!-- Contoh Produk -->
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="baju1.jpeg" class="card-img-top" alt="Produk 1" style="height: 215px;width: 100%;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Baju Casual</h5>
+                            <p class="card-text">Bahan katun berkualitas, nyaman dipakai. Cocok untuk berbagai acara santai.</p>
+                            <button class="btn btn-primary">Pesan Sekarang</button>
+                            <button class="btn btn-secondary"><i class="fas fa-shopping-cart"></i> Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="baju10.jpg" class="card-img-top" alt="Produk 2" style="height: 215px;width: 100%;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Baju Formal</h5>
+                            <p class="card-text">Baju formal dengan desain elegan. Cocok untuk acara kantor atau pertemuan penting.</p>
+                            <button class="btn btn-primary">Pesan Sekarang</button>
+                            <button class="btn btn-secondary"><i class="fas fa-shopping-cart"></i> Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="baju2.jpg" class="card-img-top" alt="Produk 3" style="height: 215px;width: 100%;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Baju Kerja</h5>
+                            <p class="card-text">Baju kerja profesional, nyaman dipakai sepanjang hari. Tentunya dengan bahan yang premium</p>
+                            <button class="btn btn-primary">Pesan Sekarang</button>
+                            <button class="btn btn-secondary"><i class="fas fa-shopping-cart"></i> Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="baju3.jpeg" class="card-img-top" alt="Produk 4" style="height: 215px;width: 100%;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Baju Santai</h5>
+                            <p class="card-text">Baju santai yang nyaman untuk beraktivitas sehari-hari. Tentunya dengan bahan yang premium</p>
+                            <button class="btn btn-primary">Pesan Sekarang</button>
+                            <button class="btn btn-secondary"><i class="fas fa-shopping-cart"></i> Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="baju4.jpg" class="card-img-top" alt="Produk 5" style="height: 215px;width: 100%;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Baju Musim Dingin</h5>
+                            <p class="card-text">Baju hangat dengan bahan premium, ideal untuk cuaca dingin.Tentunya dengan bahan yang premium</p>
+                            <button class="btn btn-primary">Pesan Sekarang</button>
+                            <button class="btn btn-secondary"><i class="fas fa-shopping-cart"></i> Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="baju5.jpg" class="card-img-top" alt="Produk 6" style="height: 215px;width: 100%;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Baju Olahraga</h5>
+                            <p class="card-text">Baju olahraga dengan desain fungsional dan nyaman digunakan saat berolahraga.</p>
+                            <button class="btn btn-primary">Pesan Sekarang</button>
+                            <button class="btn btn-secondary"><i class="fas fa-shopping-cart"></i> Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="baju6.jpg" class="card-img-top" alt="Produk 7" style="height: 215px;width: 100%;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Baju Kasual wanita</h5>
+                            <p class="card-text">Baju kasual wanita dengan desain modis, elegan dan nyaman dipakai sehari-hari.</p>
+                            <button class="btn btn-primary">Pesan Sekarang</button>
+                            <button class="btn btn-secondary"><i class="fas fa-shopping-cart"></i> Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="baju7.jpg" class="card-img-top" alt="Produk 8" style="height: 215px;width: 100%;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Baju Musim Panas</h5>
+                            <p class="card-text">Baju ringan dan nyaman untuk cuaca panas, cocok untuk liburan.Tentunya dengan bahan yang premium</p>
+                            <button class="btn btn-primary">Pesan Sekarang</button>
+                            <button class="btn btn-secondary"><i class="fas fa-shopping-cart"></i> Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="baju8.jpg" class="card-img-top" alt="Produk 9" style="height: 215px;width: 100%;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Baju Pesta</h5>
+                            <p class="card-text">Baju pesta dengan desain elegan untuk acara spesial.</p>
+                            <button class="btn btn-primary">Pesan Sekarang</button>
+                            <button class="btn btn-secondary"><i class="fas fa-shopping-cart"></i> Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="baju9.jpg" class="card-img-top" alt="Produk 10" style="height: 215px;width: 100%;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Baju Santai Wanita</h5>
+                            <p class="card-text">Baju santai wanita dengan desain simpel dan elegan.</p>
+                            <button class="btn btn-primary">Pesan Sekarang</button>
+                            <button class="btn btn-secondary"><i class="fas fa-shopping-cart"></i> Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><!-- Tambahkan produk lainnya -->
+            </div>
+        </section>
+
+        <!-- Section Kelebihan Kami -->
+        <section id="why-us" class="my-4" style="display: none;">
+            <h2>Kelebihan Kami</h2>
+            <ul>
+                <li>Bahan Berkualitas Tinggi: Produk kami dibuat dari material terbaik yang nyaman dipakai.</li>
+                <li>Harga Terjangkau: Kami menawarkan produk dengan harga yang kompetitif.</li>
+                <li>Pengiriman Cepat: Pesanan Anda akan kami kirimkan dengan cepat dan aman.</li>
+                <li>Layanan Pelanggan Terbaik: Tim kami siap membantu Anda kapan saja.</li>
+            </ul>
+        </section>
+
+        <!-- Section Kontak Kami -->
+        <section id="contact" class="my-4" style="display: none;">
+            <h2>Kontak Kami</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Pesan</label>
+                    <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Kirim</button>
+            </form>
+        </section>
+
+        <!-- Ikon Keranjang Tetap di Pojok Kanan Bawah -->
+        <div id="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </div>
+
+    <footer>
+        <p>By Nurani Sya'dyah</p>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none'; 
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>
